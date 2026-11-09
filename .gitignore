@@ -1,0 +1,24 @@
+# --- Obsidian (keep shared settings, ignore per-user state) ---
+documentation/.obsidian/workspace*.json
+documentation/.obsidian/cache
+documentation/.trash/
+
+# --- STM32CubeIDE / build outputs ---
+SW/**/Debug/
+SW/**/Release/
+SW/**/build/
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.list
+*.hex
+*.bin
+
+# --- IDE / OS ---
+SW/**/.settings/
+*.launch
+.vscode/
+Thumbs.db
+.DS_Store
