@@ -23,3 +23,27 @@ relevant. Remove an entry once it has been addressed.
 - **Concurrent edits between sessions.** Two sessions editing the same file overwrite each other.
   Roles that modify code may need separate git worktrees. *Relevant when:* the first
   code-producing role is defined.
+
+## Traceability and artifact model
+
+To be elaborated together with the ADR and note templates. Goal: a concept task (feature-level,
+e.g. "TFT display support") links to the tasks and work products created for it (notes, ADRs,
+requirements, architecture, implementation, tests), so that it is visible what was produced
+within the concept. The Obsidian graph with plain links is sufficient; relation types do not need
+to be visible in the graph.
+
+- **Links only in typed YAML fields** (`parent`, `derived_from`, `implements`, `verifies`, ...).
+  No ad-hoc wikilinks in note bodies, to avoid linking everything with everything.
+- **One direction only:** a derived element points to its source, never the other way round.
+  The concept does not list its children; they are visible in backlinks and the local graph.
+- **No links from tasks to process documents** (strategy, task type descriptions, templates);
+  they would become hub nodes connected to everything.
+- **Check the Concept template:** its comment contains wikilinks (`[[Process/TaskTypes/Concept|...]]`,
+  `[[CON-NNN_...]]`) that may create noise in the graph; replace them with plain text if needed.
+- **Reconsider the `outputs` field of the Concept task:** it duplicates `parent` in ADRs and notes
+  in the opposite direction. Proposal: remove it and rephrase the `BRAINSTORMING` →
+  `IN_IMPLEMENTATION` condition accordingly.
+- **Tools:** local graph of a concept (depth 2–3) for a quick overview; Bases views embedded in the
+  concept for a status overview of derived elements, if needed.
+
+*Relevant when:* defining ADR and note templates and the agent task types.
