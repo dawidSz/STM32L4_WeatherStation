@@ -34,9 +34,12 @@ Rules that every new task type must satisfy when it is defined in a project's pr
 
 ## State diagram
 
-- The task template contains a Mermaid state diagram (`stateDiagram-v2`) of all transitions.
-- The diagram is placed in a section marked as removed on task creation; it is deleted from every
-  task instance, so instances do not carry outdated diagrams.
+- The task type description contains a Mermaid state diagram (`stateDiagram-v2`) of all
+  transitions, next to the status table.
+- The diagram is not part of the template nor of task instances, so instances do not carry
+  outdated diagrams.
+- Hints in the template (allowed values, file name, etc.) are placed in a section marked as
+  removed on task creation.
 
 ## Fields (YAML frontmatter)
 

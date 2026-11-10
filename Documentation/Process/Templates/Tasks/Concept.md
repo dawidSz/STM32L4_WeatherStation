@@ -20,23 +20,7 @@ closed:
 > - blocked_by: links to blocking concepts – mandatory when status is BLOCKED
 > - outputs: links to ADRs (Architecture/Concept Level/ADR/) and notes (Architecture/Concept Level/Notes/)
 > - closed: set when status becomes IMPLEMENTED or DROPPED
->
-> ```mermaid
-> stateDiagram-v2
->     [*] --> OPEN
->     OPEN --> BRAINSTORMING
->     OPEN --> BLOCKED
->     BRAINSTORMING --> BLOCKED
->     BLOCKED --> OPEN
->     BLOCKED --> BRAINSTORMING
->     BRAINSTORMING --> IN_IMPLEMENTATION
->     IN_IMPLEMENTATION --> IMPLEMENTED
->     OPEN --> DROPPED
->     BLOCKED --> DROPPED
->     BRAINSTORMING --> DROPPED
->     IMPLEMENTED --> [*]
->     DROPPED --> [*]
-> ```
+> - Statuses, transitions and the state diagram: see the Concept task type description
 
 ## Topic
 

@@ -45,7 +45,8 @@ Common rules for all task types:
 - Every status change updates the `updated` field and adds an entry to the task's Log.
 - Derived tasks link to their origin with the `parent` field; links point from the derived
   element to its source.
-- The state diagram of a task type is part of its template and is removed from task instances.
+- The state diagram of a task type is part of its type description; templates and task
+  instances do not contain it.
 
 ## Documentation structure
 

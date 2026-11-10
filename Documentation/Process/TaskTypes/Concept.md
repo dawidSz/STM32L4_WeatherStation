@@ -27,7 +27,23 @@ architecture, implementation, tests).
 | `DROPPED` | The concept was abandoned; the file is kept for history |
 
 Initial status: `OPEN`. Final statuses: `IMPLEMENTED`, `DROPPED`.
-The state diagram is part of the [[Process/Templates/Tasks/Concept|Concept template]].
+
+```mermaid
+stateDiagram-v2
+    [*] --> OPEN
+    OPEN --> BRAINSTORMING
+    OPEN --> BLOCKED
+    BRAINSTORMING --> BLOCKED
+    BLOCKED --> OPEN
+    BLOCKED --> BRAINSTORMING
+    BRAINSTORMING --> IN_IMPLEMENTATION
+    IN_IMPLEMENTATION --> IMPLEMENTED
+    OPEN --> DROPPED
+    BLOCKED --> DROPPED
+    BRAINSTORMING --> DROPPED
+    IMPLEMENTED --> [*]
+    DROPPED --> [*]
+```
 
 ## Transitions
 
