@@ -4,7 +4,13 @@ Rules that apply to every session and every task, regardless of the project.
 
 ## Rules
 
-- All repository content (code, documentation, commit messages) is written in English.
+- Conversation with the user is held in Polish; all repository content (code, documentation,
+  commit messages) is written in English.
+- Work step by step: before creating or changing anything, propose the solution and wait for the
+  user's approval.
+- Git operations (commit, push) only on the user's request. Commits are made and pushed directly
+  to `main`.
+- Do not mention any external process standards in the repository; the process is the user's own.
 - Commit messages have a short summary line followed by a body that describes the changes and the
   progress of the work in more detail (what was changed, why, and what was decided).
 - Documentation vaults are Obsidian vaults: use Markdown and `[[wikilinks]]`.
