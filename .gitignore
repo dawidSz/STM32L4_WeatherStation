@@ -1,7 +1,7 @@
-# --- Obsidian (keep shared settings, ignore per-user state) ---
-documentation/.obsidian/workspace*.json
-documentation/.obsidian/cache
-documentation/.trash/
+# --- Obsidian (vault settings are per-user) ---
+.obsidian/
+Documentation/.trash/
+ClaudeCooperationRules/.trash/
 
 # --- STM32CubeIDE / build outputs ---
 SW/**/Debug/
