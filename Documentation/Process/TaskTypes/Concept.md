@@ -10,8 +10,8 @@ architecture, implementation, tests).
 | Item | Rule |
 |------|------|
 | Type | `type: concept` |
-| ID | `CON-NNN` (sequential, never reused) |
-| File | `Tasks/Concepts/CON-NNN_short-description.md` |
+| Prefix / ID | `CON` / `CON-NNNN` (sequential, never reused) |
+| File | `Tasks/Concepts/CON-NNNN Topic.md` |
 | Template | [[Process/Templates/Tasks/Concept\|Concept template]] |
 | Title | Short, keyword-style description of the topic, e.g. "Determine how weather conditions should be presented" |
 
@@ -26,22 +26,8 @@ architecture, implementation, tests).
 | `IMPLEMENTED` | All derived tasks are done; the feature is implemented |
 | `DROPPED` | The concept was abandoned; the file is kept for history |
 
-```mermaid
-stateDiagram-v2
-    [*] --> OPEN
-    OPEN --> BRAINSTORMING
-    OPEN --> BLOCKED
-    BRAINSTORMING --> BLOCKED
-    BLOCKED --> OPEN
-    BLOCKED --> BRAINSTORMING
-    BRAINSTORMING --> IN_IMPLEMENTATION
-    IN_IMPLEMENTATION --> IMPLEMENTED
-    OPEN --> DROPPED
-    BLOCKED --> DROPPED
-    BRAINSTORMING --> DROPPED
-    IMPLEMENTED --> [*]
-    DROPPED --> [*]
-```
+Initial status: `OPEN`. Final statuses: `IMPLEMENTED`, `DROPPED`.
+The state diagram is part of the [[Process/Templates/Tasks/Concept|Concept template]].
 
 ## Transitions
 
@@ -54,7 +40,20 @@ stateDiagram-v2
 | `IN_IMPLEMENTATION` → `IMPLEMENTED` | Chief Engineer, on orchestrator's request | All derived tasks are done |
 | `OPEN` / `BLOCKED` / `BRAINSTORMING` → `DROPPED` | Chief Engineer | Concept is no longer needed; reason recorded in Log |
 
-Every status change updates `updated` and adds an entry to the Log section.
+Every status change updates `updated` and adds an entry to the Log section. Reaching a final
+status also sets `closed`.
+
+## Fields
+
+Common base fields (`type`, `id`, `title`, `status`, `assignee`, `parent`, `created`, `updated`,
+`closed`) plus:
+
+| Field | Content |
+|-------|---------|
+| `assignee` | Always `CHIEF_ENGINEER` |
+| `parent` | Empty – concepts are top-level tasks |
+| `blocked_by` | Links to blocking concepts; mandatory when status is `BLOCKED` |
+| `outputs` | Links to the notes and ADRs produced by the concept |
 
 ## Outputs
 
@@ -62,5 +61,5 @@ Every status change updates `updated` and adds an entry to the Log section.
 - Notes: `Architecture/Concept Level/Notes/`
 
 Outputs are linked in the `outputs` field. Derived agent tasks point to the concept with
-`parent: "[[CON-NNN_...]]"`; the list of derived tasks is therefore visible in backlinks and
+`parent: "[[CON-NNNN Topic]]"`; the list of derived tasks is therefore visible in backlinks and
 is not maintained manually in the concept.

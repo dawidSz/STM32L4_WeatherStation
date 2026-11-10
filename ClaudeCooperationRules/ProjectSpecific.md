@@ -8,8 +8,8 @@ only this file is rewritten.
 
 **STM32L4 Weather Station** – embedded firmware for a weather station based on an STM32L4
 microcontroller (hardware details: TBD). The project is also a pilot for a repeatable,
-agent-based engineering process: the user acts as Chief Engineer / Architect, the main Claude Code
-session acts as orchestrator delegating work to specialised agents.
+agent-based engineering process: the user acts as Chief Engineer / Architect, parallel Claude Code
+sessions take agent roles (orchestrator, engineers, reviewer, ...).
 
 ## Process – start here
 
@@ -22,8 +22,12 @@ documentation structure, and links to the detailed process rules.
 
 ## Status
 
-Process definition in progress. Defined so far: Concept task type. Agent task types, ADR and note
-templates, agent profiles: TBD.
+Process definition in progress.
+
+- Done: Concept task type (adapted to the task creation rules); task creation rules
+  (`Rules/TaskCreationRules.md`).
+- Next: list of agent task types and their definitions.
+- TBD: ADR and note templates, traceability model, role profiles, task dashboard (Bases).
 
 ## Repository layout
 

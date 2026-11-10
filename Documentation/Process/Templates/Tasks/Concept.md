@@ -1,27 +1,46 @@
 ---
 type: concept
-id: CON-NNN
+id: CON-NNNN
 title: ""
 status: OPEN
+assignee: CHIEF_ENGINEER
+parent:
 blocked_by: []
 outputs: []
 created: {{date:YYYY-MM-DD}}
 updated: {{date:YYYY-MM-DD}}
+closed:
 ---
 
 # {{title}}
 
-<!--
-See [[Process/TaskTypes/Concept|Concept task type]] for rules.
-- status: OPEN | BLOCKED | BRAINSTORMING | IN_IMPLEMENTATION | IMPLEMENTED | DROPPED
-- blocked_by: ["[[CON-NNN_...]]"] – mandatory when status is BLOCKED
-- outputs: ["[[ADR-NNN_...]]", "[[note]]"] – ADRs in Architecture/Concept Level/ADR/, notes in Architecture/Concept Level/Notes/
-- File name: Tasks/Concepts/CON-NNN_short-description.md
--->
+> [!warning] Template reference – delete this section when creating a task
+> - File name: `Tasks/Concepts/CON-NNNN Topic.md`
+> - status: OPEN | BLOCKED | BRAINSTORMING | IN_IMPLEMENTATION | IMPLEMENTED | DROPPED
+> - blocked_by: links to blocking concepts – mandatory when status is BLOCKED
+> - outputs: links to ADRs (Architecture/Concept Level/ADR/) and notes (Architecture/Concept Level/Notes/)
+> - closed: set when status becomes IMPLEMENTED or DROPPED
+>
+> ```mermaid
+> stateDiagram-v2
+>     [*] --> OPEN
+>     OPEN --> BRAINSTORMING
+>     OPEN --> BLOCKED
+>     BRAINSTORMING --> BLOCKED
+>     BLOCKED --> OPEN
+>     BLOCKED --> BRAINSTORMING
+>     BRAINSTORMING --> IN_IMPLEMENTATION
+>     IN_IMPLEMENTATION --> IMPLEMENTED
+>     OPEN --> DROPPED
+>     BLOCKED --> DROPPED
+>     BRAINSTORMING --> DROPPED
+>     IMPLEMENTED --> [*]
+>     DROPPED --> [*]
+> ```
 
 ## Topic
 
-What this concept is about.
+What this concept is about (optional – the title may be sufficient).
 
 ## Questions to answer
 

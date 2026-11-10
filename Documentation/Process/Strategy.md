@@ -33,14 +33,19 @@ Each task type is described in `Process/TaskTypes/` and has a template in `Proce
 
 | Type | ID | Owner | Description | Template |
 |------|----|-------|-------------|----------|
-| [[Process/TaskTypes/Concept\|Concept]] | `CON-NNN` | Chief Engineer | Epic-like entry point for a topic; its outputs are the input for agent tasks | [[Process/Templates/Tasks/Concept\|Concept template]] |
+| [[Process/TaskTypes/Concept\|Concept]] | `CON-NNNN` | Chief Engineer | Epic-like entry point for a topic; its outputs are the input for agent tasks | [[Process/Templates/Tasks/Concept\|Concept template]] |
 
 Common rules for all task types:
 
-- One file per task; the status is kept in YAML frontmatter and is the single source of truth.
-- Status values are written in UPPERCASE.
+- One file per task, named `PREFIX-NNNN Topic.md`; the task ID is `PREFIX-NNNN` (never reused).
+- The status is kept in YAML frontmatter and is the single source of truth.
+- Status values are written in UPPERCASE, words separated with `_`.
+- Common base fields of every task: `type`, `id`, `title`, `status`, `assignee`, `parent`,
+  `created`, `updated`, `closed` (dates as `YYYY-MM-DD`; `closed` empty until a final status).
 - Every status change updates the `updated` field and adds an entry to the task's Log.
-- Derived tasks link to their origin with the `parent` field.
+- Derived tasks link to their origin with the `parent` field; links point from the derived
+  element to its source.
+- The state diagram of a task type is part of its template and is removed from task instances.
 
 ## Documentation structure
 
