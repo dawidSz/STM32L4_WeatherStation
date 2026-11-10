@@ -7,7 +7,7 @@ Embedded firmware project for an STM32L4 microcontroller, developed with an agen
 | Path | Content |
 |------|---------|
 | `Documentation/` | Obsidian vault: project process, tasks, architecture |
-| `ClaudeCooperationRules/` | Separate Obsidian vault: rules for cooperation with Claude Code, `CLAUDE.md`, agent definitions (`.claude/agents/`) |
+| `Claude/` | Separate Obsidian vault: rules for cooperation with Claude Code, `CLAUDE.md`, agent definitions (`.claude/agents/`) |
 | `SW/` | Software project: STM32CubeMX configuration (`.ioc`), source code, build files |
 
 ## Documentation vault

@@ -1,7 +1,7 @@
 # --- Obsidian (vault settings are per-user) ---
 .obsidian/
 Documentation/.trash/
-ClaudeCooperationRules/.trash/
+Claude/.trash/
 
 # --- STM32CubeIDE / build outputs ---
 SW/**/Debug/

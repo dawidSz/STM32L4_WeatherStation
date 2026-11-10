@@ -1,7 +1,7 @@
 # Project specific information
 
 This is the only file in this vault that refers to a concrete project. Everything else in
-`ClaudeCooperationRules/` is project-independent; when the vault is reused in another project,
+`Claude/` is project-independent; when the vault is reused in another project,
 only this file is rewritten.
 
 ## Project
@@ -35,4 +35,4 @@ Process definition in progress.
 |------|---------|
 | `Documentation/` | Obsidian vault of the project: process, tasks, architecture |
 | `SW/` | Software project: STM32CubeMX configuration, source code, build files |
-| `ClaudeCooperationRules/` | This vault: project-independent rules for cooperation with Claude Code |
+| `Claude/` | This vault: project-independent rules for cooperation with Claude Code |

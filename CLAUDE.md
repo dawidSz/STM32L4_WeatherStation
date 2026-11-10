@@ -1,1 +1,1 @@
-@ClaudeCooperationRules/CLAUDE.md
+@Claude/CLAUDE.md
