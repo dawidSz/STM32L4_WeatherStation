@@ -1,8 +1,3 @@
----
-type: process
-title: "Process strategy"
----
-
 # Process strategy
 
 Main description of the engineering process used in this project. Detailed rules live in the
