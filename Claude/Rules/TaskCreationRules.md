@@ -11,7 +11,7 @@ Rules that every new task type must satisfy when it is defined in a project's pr
 
 ## Identification
 
-- Every task type has a unique **prefix** of 3 uppercase letters (e.g. `CON` for concept tasks),
+- Every task type has a unique **prefix** of 3–10 uppercase letters (e.g. `CON` for concept tasks),
   registered in the task type table of the process strategy to avoid collisions.
 - Task ID format: `PREFIX-NNNN` (4 digits, zero-padded, sequential, never reused), e.g. `CON-0001`.
 - File name: `PREFIX-NNNN Topic.md`, e.g. `CON-0001 TFT display support.md`. Spaces are allowed;
@@ -24,6 +24,12 @@ Rules that every new task type must satisfy when it is defined in a project's pr
 - The initial status and the final statuses are stated explicitly, including a status for
   abandoned tasks (e.g. `DROPPED`).
 - The same name is used for the same meaning across task types wherever possible.
+
+## Shared lifecycle
+
+- Several task types may share one lifecycle (statuses, transitions, state diagram, common
+  fields) described in a separate document of the process documentation. A task type using it
+  refers to that document and describes only its specific rules and deviations.
 
 ## Transitions
 

@@ -25,7 +25,7 @@ flowchart LR
 |------|----------------|
 | Chief Engineer | Owns concept tasks, makes architectural decisions, approves key status transitions |
 | Orchestrator | Main Claude Code session; delegates work to agents and reports status to the Chief Engineer |
-| Agents | Specialised roles (TBD) |
+| Agents | Specialised roles; provisional: System Engineer, SW Architect, SW Developer, Test Engineer, Reviewer |
 
 ## Task types
 
@@ -34,6 +34,18 @@ Each task type is described in `Process/TaskTypes/` and has a template in `Proce
 | Type | ID | Owner | Description | Template |
 |------|----|-------|-------------|----------|
 | [[Process/TaskTypes/Concept\|Concept]] | `CON-NNNN` | Chief Engineer | Epic-like entry point for a topic; its outputs are the input for agent tasks | [[Process/Templates/Tasks/Concept\|Concept template]] |
+| [[Process/TaskTypes/System Requirements\|System Requirements]] | `SYSREQ-NNNN` | System Engineer | System-level requirements describing system behaviour | [[Process/Templates/Tasks/System Requirements\|System Requirements template]] |
+| [[Process/TaskTypes/System Architecture\|System Architecture]] | `SYSARCH-NNNN` | System Engineer | High-level components, deployment, available hardware | [[Process/Templates/Tasks/System Architecture\|System Architecture template]] |
+| [[Process/TaskTypes/Software Requirements\|Software Requirements]] | `SWREQ-NNNN` | SW Architect | Software requirements derived from the system level | [[Process/Templates/Tasks/Software Requirements\|Software Requirements template]] |
+| [[Process/TaskTypes/Software Architecture\|Software Architecture]] | `SWARCH-NNNN` | SW Architect | Software components and interfaces | [[Process/Templates/Tasks/Software Architecture\|Software Architecture template]] |
+| [[Process/TaskTypes/Software Implementation\|Software Implementation]] | `SWIMPL-NNNN` | SW Developer | Implementation and integration of the firmware | [[Process/Templates/Tasks/Software Implementation\|Software Implementation template]] |
+| [[Process/TaskTypes/Unit Test\|Unit Test]] | `UNITTEST-NNNN` | Test Engineer | Unit test specification and execution | [[Process/Templates/Tasks/Unit Test\|Unit Test template]] |
+| [[Process/TaskTypes/Integration Test\|Integration Test]] | `INTTEST-NNNN` | Test Engineer | Integration test specification and execution | [[Process/Templates/Tasks/Integration Test\|Integration Test template]] |
+| [[Process/TaskTypes/Environment Setup\|Environment Setup]] | `ENVSETUP-NNNN` | SW Developer | Development environment, toolchain, CI | [[Process/Templates/Tasks/Environment Setup\|Environment Setup template]] |
+| [[Process/TaskTypes/Process Improvement\|Process Improvement]] | `PROCIMPROV-NNNN` | Chief Engineer | Improvements of the project's process | [[Process/Templates/Tasks/Process Improvement\|Process Improvement template]] |
+
+All agent task types share one lifecycle, described in
+[[Process/TaskTypes/AgentTask|Agent task lifecycle]].
 
 Common rules for all task types:
 
@@ -56,6 +68,10 @@ Common rules for all task types:
 | `Process/TaskTypes/` | One document per task type |
 | `Process/Templates/Tasks/` | Task templates |
 | `Tasks/Concepts/` | Concept tasks |
+| `Tasks/System/` | System requirements and architecture tasks |
+| `Tasks/Software/` | Software requirements, architecture and implementation tasks |
+| `Tasks/Test/` | Unit and integration test tasks |
+| `Tasks/Support/` | Environment setup and process improvement tasks |
 | `Architecture/Concept Level/ADR/` | Architecture Decision Records produced by concept tasks |
 | `Architecture/Concept Level/Notes/` | Notes produced by concept tasks |
 | `Architecture/System Level/` | System architecture |
@@ -63,7 +79,7 @@ Common rules for all task types:
 
 ## Open topics
 
-- Agent task types and their lifecycle
+- Rules for work products and their traceability
 - ADR and note templates
 - Agent profiles
 - Task dashboard (Obsidian Bases)

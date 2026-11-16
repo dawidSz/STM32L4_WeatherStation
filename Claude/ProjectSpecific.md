@@ -26,7 +26,9 @@ Process definition in progress.
 
 - Done: Concept task type (adapted to the task creation rules); task creation rules
   (`Rules/TaskCreationRules.md`).
-- Next: list of agent task types and their definitions.
+- Done: agent task types (SYSREQ, SYSARCH, SWREQ, SWARCH, SWIMPL, UNITTEST, INTTEST, ENVSETUP,
+  PROCIMPROV) with a shared lifecycle (`Process/TaskTypes/AgentTask.md`).
+- Next: rules for work products created within agent tasks.
 - TBD: ADR and note templates, traceability model, role profiles, task dashboard (Bases).
 
 ## Repository layout
