@@ -18,7 +18,9 @@ agent tasks: see [[Process/TaskTypes/AgentTask|Agent task lifecycle]].
 
 ## Outputs
 
-Changed process documents in `Process/`.
+Changed process documents in `Process/`. In `outputs` they are listed as plain-text paths
+(e.g. `"Process/Strategy.md"`), not as wikilinks, so that process documents do not become hub
+nodes in the graph.
 
 ## Definition of done
 

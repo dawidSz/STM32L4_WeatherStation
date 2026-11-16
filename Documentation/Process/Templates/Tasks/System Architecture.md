@@ -5,6 +5,7 @@ title: ""
 status: OPEN
 assignee: SYSTEM_ENGINEER
 parent:
+concept:
 blocked_by: []
 outputs: []
 created: {{date:YYYY-MM-DD}}
@@ -18,6 +19,7 @@ closed:
 > - File name: `Tasks/System/Architecture/SYSARCH-NNNN Topic.md`
 > - status: OPEN | BLOCKED | IN_PROGRESS | IN_REVIEW | DONE | DROPPED
 > - parent: System requirements task or concept task
+> - concept: link to the source concept (copy from the parent task); empty if not related to a concept
 > - blocked_by: links to blocking tasks – mandatory when status is BLOCKED
 > - outputs: links to the work products created or changed by the task
 > - closed: set when status becomes DONE or DROPPED

@@ -13,7 +13,7 @@ agent task, and are worked on by the role given in `assignee`.
 | `OPEN`        | Ready to be started                                               |
 | `BLOCKED`     | Cannot be worked on until other tasks are done (see `blocked_by`) |
 | `IN_PROGRESS` | The assignee is working on the task                               |
-| `IN_REVIEW`   | The work products are waiting for review                          |
+| `IN_REVIEW`   | Work products are waiting for review and Chief Engineer approval  |
 | `DONE`        | Review passed; the work products are accepted                     |
 | `DROPPED`     | The task was abandoned; the file is kept for history              |
 
@@ -45,8 +45,8 @@ stateDiagram-v2
 | `OPEN` / `IN_PROGRESS` → `BLOCKED` | Assignee or orchestrator | `blocked_by` links the task(s) that must be done first |
 | `BLOCKED` → previous status | Assignee or orchestrator | All blocking tasks are `DONE` or `DROPPED` |
 | `IN_PROGRESS` → `IN_REVIEW` | Assignee | Work products are complete and listed in `outputs` |
-| `IN_REVIEW` → `IN_PROGRESS` | Reviewer | Review findings must be addressed; findings recorded in Log |
-| `IN_REVIEW` → `DONE` | Reviewer | Definition of done of the task type is met |
+| `IN_REVIEW` → `IN_PROGRESS` | Reviewer or Chief Engineer | Review findings must be addressed; findings recorded in Log |
+| `IN_REVIEW` → `DONE` | Chief Engineer | Review passed and recorded in Log; definition of done of the task type is met |
 | `OPEN` / `BLOCKED` / `IN_PROGRESS` → `DROPPED` | Chief Engineer | Task is no longer needed; reason recorded in Log |
 
 Every status change updates `updated` and adds an entry to the Log section. Reaching a final
@@ -56,7 +56,7 @@ status also sets `closed`.
 
 - All items of the task's Scope are covered or explicitly moved to another task.
 - All work products are listed in `outputs`.
-- Review passed and recorded in Log.
+- Review passed and recorded in Log; approved by the Chief Engineer.
 - Type-specific criteria (see the task type description) are met.
 
 ## Fields
@@ -67,6 +67,7 @@ Common base fields (`type`, `id`, `title`, `status`, `assignee`, `parent`, `crea
 | Field | Content |
 |-------|---------|
 | `parent` | Link to the source task (concept or upstream agent task); may be empty for support tasks |
+| `concept` | Link to the concept the task ultimately derives from, copied from the parent task on creation; empty for support tasks not related to a concept. Used by the concept task overview |
 | `blocked_by` | Links to blocking tasks; mandatory when status is `BLOCKED` |
 | `outputs` | Links to the work products created or changed by the task |
 
@@ -82,6 +83,6 @@ together with the rules for work products.
 | Software Developer | `SW_DEVELOPER` |
 | Test Engineer | `TEST_ENGINEER` |
 | Chief Engineer | `CHIEF_ENGINEER` |
-| Reviewer | – (performs the review transitions, never an assignee) |
+| Reviewer | – (reviews work products in `IN_REVIEW`, never an assignee) |
 
 Final role names are set together with the role profiles.

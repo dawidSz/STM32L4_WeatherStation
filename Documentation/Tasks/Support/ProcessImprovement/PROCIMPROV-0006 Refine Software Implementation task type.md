@@ -5,6 +5,7 @@ title: "Refine Software Implementation task type"
 status: OPEN
 assignee: CHIEF_ENGINEER
 parent:
+concept:
 blocked_by: []
 outputs: []
 created: 2026-11-16

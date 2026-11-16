@@ -1,0 +1,33 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+    - type == "environment_setup"
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status != "DONE"
+        - status != "DROPPED"
+    order:
+      - file.name
+      - status
+      - assignee
+      - updated
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: All
+    order:
+      - file.name
+      - status
+      - assignee
+      - updated
+      - closed
+    sort:
+      - property: file.name
+        direction: ASC

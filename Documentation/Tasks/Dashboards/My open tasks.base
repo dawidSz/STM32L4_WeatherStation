@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: My open tasks
+    filters:
+      and:
+        - assignee == "CHIEF_ENGINEER"
+        - status != "DONE"
+        - status != "DROPPED"
+        - status != "IMPLEMENTED"
+    order:
+      - file.name
+      - type
+      - status
+      - updated
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 385

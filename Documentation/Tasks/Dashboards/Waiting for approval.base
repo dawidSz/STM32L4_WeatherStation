@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: Waiting for approval
+    filters:
+      and:
+        - type != "concept"
+        - status == "IN_REVIEW"
+    order:
+      - file.name
+      - type
+      - assignee
+      - updated
+    sort:
+      - property: updated
+        direction: DESC

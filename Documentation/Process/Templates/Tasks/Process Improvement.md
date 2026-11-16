@@ -5,6 +5,7 @@ title: ""
 status: OPEN
 assignee: CHIEF_ENGINEER
 parent:
+concept:
 blocked_by: []
 outputs: []
 created: {{date:YYYY-MM-DD}}
@@ -18,8 +19,9 @@ closed:
 > - File name: `Tasks/Support/ProcessImprovement/PROCIMPROV-NNNN Topic.md`
 > - status: OPEN | BLOCKED | IN_PROGRESS | IN_REVIEW | DONE | DROPPED
 > - parent: Optional – the task that revealed the improvement; empty otherwise
+> - concept: link to the source concept (copy from the parent task); empty if not related to a concept
 > - blocked_by: links to blocking tasks – mandatory when status is BLOCKED
-> - outputs: links to the work products created or changed by the task
+> - outputs: plain-text paths of the changed process documents (e.g. "Process/Strategy.md"), no wikilinks
 > - closed: set when status becomes DONE or DROPPED
 > - Statuses, transitions and the state diagram: see the Agent task lifecycle description
 

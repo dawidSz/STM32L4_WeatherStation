@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: Concepts to close
+    filters:
+      and:
+        - type == "concept"
+        - status == "IN_IMPLEMENTATION"
+    order:
+      - file.name
+      - status
+      - updated

@@ -36,6 +36,28 @@ What this concept is about (optional – the title may be sufficient).
 
 Summary of decisions – the input for derived agent tasks.
 
+## Derived tasks
+
+Live overview of all tasks whose `concept` field points to this concept (no links are stored).
+
+```base
+filters:
+  and:
+    - file.inFolder("Tasks")
+    - 'concept.linksTo(this.file)'
+views:
+  - type: table
+    name: Derived tasks
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - assignee
+      - updated
+```
+
 ## Log
 
 - {{date:YYYY-MM-DD}} – created (status: OPEN)

@@ -76,10 +76,38 @@ Common rules for all task types:
 | `Architecture/Concept Level/Notes/` | Notes produced by concept tasks |
 | `Architecture/System Level/` | System architecture |
 | `Architecture/Software Level/` | Software architecture |
+| `Tasks/Dashboards/` | Task status dashboards (Obsidian Bases) |
+
+## Dashboards
+
+The current status of tasks is presented in Obsidian Bases (`.base` files in `Tasks/Dashboards/`).
+Dashboards only read the YAML fields of the tasks and store no data, so the task files remain
+the single source of truth.
+
+| Dashboard | Audience | Content |
+|-----------|----------|---------|
+| Waiting for approval | Chief Engineer | Agent tasks in `IN_REVIEW` |
+| Concepts to close | Chief Engineer | Concepts in `IN_IMPLEMENTATION` |
+| My open tasks | Chief Engineer | Tasks with `assignee: CHIEF_ENGINEER` not in a final status |
+| Process Improvement | Chief Engineer, orchestrator | Process improvement tasks: active and all |
+| Environment Setup | Chief Engineer, orchestrator | Environment setup tasks: active and all |
+| Concepts | Chief Engineer, orchestrator | All agent tasks grouped by concept |
+| Derived tasks | Chief Engineer | Base embedded in every concept task: its tasks grouped by task type |
+
+Concept overview: Bases cannot follow the `parent` chain over several levels, so every agent
+task carries the `concept` field (link to the source concept, copied from the parent task on
+creation). The concept overviews filter on this field; the concept itself stores no links to its
+tasks.
+
+Rules:
+
+- A status is never changed in a dashboard view; it is changed in the task file.
+- A new dashboard is added to the table above together with its purpose.
+- When a task field used by a dashboard changes, the affected dashboards are updated in the same
+  change.
 
 ## Open topics
 
 - Rules for work products and their traceability
 - ADR and note templates
 - Agent profiles
-- Task dashboard (Obsidian Bases)

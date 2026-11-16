@@ -1,0 +1,23 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+    - type != "concept"
+    - "!concept.isEmpty()"
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: Tasks by concept
+    groupBy:
+      property: concept
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - status
+      - assignee
+      - updated
+    sort:
+      - property: file.name
+        direction: ASC

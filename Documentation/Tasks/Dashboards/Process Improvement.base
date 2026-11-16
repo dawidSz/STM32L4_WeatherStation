@@ -1,0 +1,37 @@
+filters:
+  and:
+    - file.inFolder("Tasks")
+    - type == "process_improvement"
+properties:
+  file.name:
+    displayName: Task
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status != "DONE"
+        - status != "DROPPED"
+    order:
+      - file.name
+      - status
+      - assignee
+      - updated
+    sort:
+      - property: status
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 400
+  - type: table
+    name: All
+    order:
+      - file.name
+      - status
+      - assignee
+      - updated
+      - closed
+    sort:
+      - property: file.name
+        direction: ASC
