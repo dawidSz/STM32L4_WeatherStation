@@ -8,14 +8,14 @@ agent task, and are worked on by the role given in `assignee`.
 
 ## Statuses
 
-| Status | Meaning |
-|--------|---------|
-| `OPEN` | Ready to be started |
-| `BLOCKED` | Cannot be worked on until other tasks are done (see `blocked_by`) |
-| `IN_PROGRESS` | The assignee is working on the task |
-| `IN_REVIEW` | The work products are waiting for review |
-| `DONE` | Review passed; the work products are accepted |
-| `DROPPED` | The task was abandoned; the file is kept for history |
+| Status        | Meaning                                                           |
+| ------------- | ----------------------------------------------------------------- |
+| `OPEN`        | Ready to be started                                               |
+| `BLOCKED`     | Cannot be worked on until other tasks are done (see `blocked_by`) |
+| `IN_PROGRESS` | The assignee is working on the task                               |
+| `IN_REVIEW`   | The work products are waiting for review                          |
+| `DONE`        | Review passed; the work products are accepted                     |
+| `DROPPED`     | The task was abandoned; the file is kept for history              |
 
 Initial status: `OPEN`. Final statuses: `DONE`, `DROPPED`.
 
