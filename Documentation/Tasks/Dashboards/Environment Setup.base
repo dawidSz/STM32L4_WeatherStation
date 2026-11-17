@@ -20,6 +20,8 @@ views:
     sort:
       - property: file.name
         direction: ASC
+    columnSize:
+      file.name: 381
   - type: table
     name: All
     order:
