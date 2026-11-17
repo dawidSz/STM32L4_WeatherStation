@@ -3,7 +3,7 @@ type: environment_setup
 id: ENVSETUP-0001
 title: "Setup initial CubeMX project for SW"
 status: OPEN
-assignee: SW_DEVELOPER
+assignee: CHIEF_ENGINEER
 parent:
 concept:
 blocked_by: []
