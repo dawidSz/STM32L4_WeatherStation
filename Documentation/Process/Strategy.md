@@ -105,9 +105,3 @@ Rules:
 - A new dashboard is added to the table above together with its purpose.
 - When a task field used by a dashboard changes, the affected dashboards are updated in the same
   change.
-
-## Open topics
-
-- Rules for work products and their traceability
-- ADR and note templates
-- Agent profiles
