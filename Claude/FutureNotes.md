@@ -5,6 +5,8 @@ relevant. Remove an entry once it has been addressed.
 
 ## Agent role profiles
 
+Related task: PROCIMPROV-0016.
+
 - **Enforce permissions technically, not only in the profile.** A rule like "the Reviewer must not
   modify code" in a prompt is a request, not a restriction. Claude Code can block tools or paths
   when a session starts (per-role permission settings or CLI flags), e.g. deny editing `SW/**` for
@@ -26,7 +28,7 @@ relevant. Remove an entry once it has been addressed.
 
 ## Traceability and artifact model
 
-To be elaborated together with the ADR and note templates. Goal: a concept task (feature-level,
+Related tasks: PROCIMPROV-0014, PROCIMPROV-0015. Goal: a concept task (feature-level,
 e.g. "TFT display support") links to the tasks and work products created for it (notes, ADRs,
 requirements, architecture, implementation, tests), so that it is visible what was produced
 within the concept. The Obsidian graph with plain links is sufficient; relation types do not need

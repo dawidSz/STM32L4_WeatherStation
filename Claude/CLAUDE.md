@@ -14,7 +14,8 @@ rules itself. Keep it short.
 - The other roles (e.g. System Engineer, Reviewer) work on tasks according to their profiles.
 - Sessions do not communicate directly; shared state lives in files (task files and their
   statuses are the single source of truth).
-- If no role has been assigned in a session, work directly with the Chief Engineer.
+- If no role has been assigned in a session, work directly with the Chief Engineer and start
+  with the session start procedure in `ProjectSpecific.md`.
 
 ## Rules (`Rules/`)
 - Global rules – always apply:
@@ -23,11 +24,12 @@ rules itself. Keep it short.
   every new task type must satisfy these rules.
 
 ## Agents (`Agents/`)
-- Role profiles: characteristics, goals, permissions, required and out-of-scope files. TBD.
+- Role profiles: characteristics, goals, permissions, required and out-of-scope files.
 
 ## Notes for the future
 - `FutureNotes.md` – ideas and topics deferred for later. Add an entry whenever something is
-  postponed; check it when working on a related topic.
+  postponed; check it when working on a related topic. An entry is not a substitute for a task:
+  work to be done is always tracked as a task.
 
 ## Project specific information
 @ProjectSpecific.md

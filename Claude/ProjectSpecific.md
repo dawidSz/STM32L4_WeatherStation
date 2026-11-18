@@ -7,7 +7,7 @@ only this file is rewritten.
 ## Project
 
 **STM32L4 Weather Station** – embedded firmware for a weather station based on an STM32L4
-microcontroller (hardware details: TBD). The project is also a pilot for a repeatable,
+microcontroller. The project is also a pilot for a repeatable,
 agent-based engineering process: the user acts as Chief Engineer / Architect, parallel Claude Code
 sessions take agent roles (orchestrator, engineers, reviewer, ...).
 
@@ -20,16 +20,17 @@ The software development and project management process is described in the proc
 Read it before working on any task. It describes roles, task types, statuses and the
 documentation structure, and links to the detailed process rules.
 
-## Status
+## Start of session
 
-Process definition in progress.
+If no role has been assigned, start the session with a review of the tasks assigned to the Chief
+Engineer and present them as "To do":
 
-- Done: Concept task type (adapted to the task creation rules); task creation rules
-  (`Rules/TaskCreationRules.md`).
-- Done: agent task types (SYSREQ, SYSARCH, SWREQ, SWARCH, SWIMPL, UNITTEST, INTTEST, ENVSETUP,
-  PROCIMPROV) with a shared lifecycle (`Process/TaskTypes/AgentTask.md`).
-- Next: rules for work products created within agent tasks.
-- TBD: ADR and note templates, traceability model, role profiles, task dashboard (Bases).
+- Tasks are the files in `Documentation/Tasks/`; read their YAML frontmatter.
+- Include tasks with `assignee: CHIEF_ENGINEER` and a status other than `DONE`, `DROPPED` or
+  `IMPLEMENTED` (the same criteria as `Documentation/Tasks/Dashboards/My open tasks.base`).
+- Group them by status and type; show ID, title and status.
+
+The current state of the project is defined only by the tasks; there is no separate status list.
 
 ## Repository layout
 

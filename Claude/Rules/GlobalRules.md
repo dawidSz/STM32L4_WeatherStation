@@ -20,4 +20,5 @@ Rules that apply to every session and every task, regardless of the project.
 - Do not add YAML frontmatter (Obsidian properties) to Markdown files. The only exception are
   files whose frontmatter is required by the project's process (e.g. tasks and their templates,
   where YAML holds the status and traceability fields).
+- Work that is still to be done is tracked only as tasks; do not leave TBD/TODO notes in files.
 - Read the project's process strategy (linked in `ProjectSpecific.md`) before working on tasks.

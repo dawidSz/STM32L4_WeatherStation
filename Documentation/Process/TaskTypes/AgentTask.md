@@ -71,9 +71,6 @@ Common base fields (`type`, `id`, `title`, `status`, `assignee`, `parent`, `crea
 | `blocked_by` | Links to blocking tasks; mandatory when status is `BLOCKED` |
 | `outputs` | Links to the work products created or changed by the task |
 
-Further relation fields between work products (e.g. `implements`, `verifies`) will be defined
-together with the rules for work products.
-
 ## Working roles (provisional)
 
 | Role | Value of `assignee` |
