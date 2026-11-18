@@ -77,6 +77,7 @@ Common rules for all task types:
 | `Architecture/System Level/` | System architecture |
 | `Architecture/Software Level/` | Software architecture |
 | `Tasks/Dashboards/` | Task status dashboards (Obsidian Bases) |
+| `Hardware/` | Hardware knowledge base: available boards and components, datasheets |
 
 ## Dashboards
 
