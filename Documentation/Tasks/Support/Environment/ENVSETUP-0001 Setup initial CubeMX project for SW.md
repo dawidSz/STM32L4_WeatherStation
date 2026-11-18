@@ -2,14 +2,14 @@
 type: environment_setup
 id: ENVSETUP-0001
 title: "Setup initial CubeMX project for SW"
-status: OPEN
+status: IN_PROGRESS
 assignee: CHIEF_ENGINEER
 parent:
 concept:
 blocked_by: []
 outputs: []
 created: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-18
 closed:
 ---
 
@@ -30,3 +30,4 @@ Create the initial STM32CubeMX project in `SW/` as the base for the firmware.
 ## Log
 
 - 2026-11-16 – created (status: OPEN)
+- 2026-11-18 – status: OPEN → IN_PROGRESS

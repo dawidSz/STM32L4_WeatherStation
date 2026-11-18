@@ -2,7 +2,7 @@
 type: environment_setup
 id: ENVSETUP-0004
 title: "Define available hardware and knowledge base"
-status: OPEN
+status: IN_PROGRESS
 assignee: CHIEF_ENGINEER
 parent:
 concept:
@@ -31,3 +31,4 @@ can use when working on requirements, architecture, implementation and tests.
 ## Log
 
 - 2026-11-18 – created (status: OPEN)
+- 2026-11-18 – status: OPEN → IN_PROGRESS
